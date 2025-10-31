@@ -4,7 +4,7 @@
 
 id: org.muttum.muttum
 runtime: org.gnome.Platform
-runtime-version: "48"
+runtime-version: "49"
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -30,14 +30,14 @@ modules:
   - name: data
     buildsystem: simple
     build-commands:
-      - install -Dm644 en_US /app/share/org.muttum.muttum/en_US
-      - install -Dm644 en_AU /app/share/org.muttum.muttum/en_AU
-      - install -Dm644 en_GB /app/share/org.muttum.muttum/en_GB
-      - install -Dm644 en_CA /app/share/org.muttum.muttum/en_CA
+      - install -Dm644 en-US /app/share/org.muttum.muttum/en-US
+      - install -Dm644 en-AU /app/share/org.muttum.muttum/en-AU
+      - install -Dm644 en-GB /app/share/org.muttum.muttum/en-GB
+      - install -Dm644 en-CA /app/share/org.muttum.muttum/en-CA
       - install -Dm644 en.license /app/share/org.muttum.muttum/en.license
-      - install -Dm644 de_AT /app/share/org.muttum.muttum/de_AT
-      - install -Dm644 de_CH /app/share/org.muttum.muttum/de_CH
-      - install -Dm644 de_DE /app/share/org.muttum.muttum/de_DE
+      - install -Dm644 de-AT /app/share/org.muttum.muttum/de-AT
+      - install -Dm644 de-CH /app/share/org.muttum.muttum/de-CH
+      - install -Dm644 de-DE /app/share/org.muttum.muttum/de-DE
       - install -Dm644 de.license /app/share/org.muttum.muttum/de.license
       - install -Dm644 fr /app/share/org.muttum.muttum/fr
       - install -Dm644 fr.license /app/share/org.muttum.muttum/fr.license
@@ -45,8 +45,8 @@ modules:
     sources:
       - type: archive
         url: "https://gitlab.adorsaz.ch/muttum/muttum/-/releases/\
-              25.07.1/downloads/dist/dictionaries-25.07.1.tar.xz"
-        sha256: fe86d91d2262382df8c1b1d1c7231d7acc592b17de525759b16e2176f273adf6
+              25.11.1/downloads/dist/dictionaries-25.11.1.tar.xz"
+        sha256: fe743bcedfaab19adc94922a27cd2e16104f7c0488fb6a4312f8c63f0a0f7374
   - name: muttum
     buildsystem: meson
     build-options:
@@ -57,5 +57,5 @@ modules:
     sources:
       - type: archive
         url: "https://gitlab.adorsaz.ch/muttum/muttum/-/releases/\
-              25.07.1/downloads/dist/muttum-25.07.1.tar.xz"
-        sha256: f4e785936819ccfb45b2281bd43831121f8b2fd50c47f2796a065675cf890cda
+              25.11.1/downloads/dist/muttum-25.11.1.tar.xz"
+        sha256: f1e5aa366165d95473505a3c27f778406ff1b22ce6753d5c8d1434b410745fec
