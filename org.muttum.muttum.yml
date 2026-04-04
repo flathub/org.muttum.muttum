@@ -4,7 +4,7 @@
 
 id: org.muttum.muttum
 runtime: org.gnome.Platform
-runtime-version: "49"
+runtime-version: "50"
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -20,23 +20,23 @@ modules:
   - name: data
     buildsystem: simple
     build-commands:
-      - install -Dm644 en-US /app/share/org.muttum.muttum/en-US
-      - install -Dm644 en-AU /app/share/org.muttum.muttum/en-AU
-      - install -Dm644 en-GB /app/share/org.muttum.muttum/en-GB
-      - install -Dm644 en-CA /app/share/org.muttum.muttum/en-CA
-      - install -Dm644 en.license /app/share/org.muttum.muttum/en.license
-      - install -Dm644 de-AT /app/share/org.muttum.muttum/de-AT
-      - install -Dm644 de-CH /app/share/org.muttum.muttum/de-CH
-      - install -Dm644 de-DE /app/share/org.muttum.muttum/de-DE
-      - install -Dm644 de.license /app/share/org.muttum.muttum/de.license
-      - install -Dm644 fr /app/share/org.muttum.muttum/fr
-      - install -Dm644 fr.license /app/share/org.muttum.muttum/fr.license
-      - install -Dm644 muttum.toml /app/etc/xdg/org.muttum.muttum/muttum.toml
+      - install -Dm644 -t /app/share/dict en-US
+      - install -Dm644 -t /app/share/dict en-AU
+      - install -Dm644 -t /app/share/dict en-GB
+      - install -Dm644 -t /app/share/dict en-CA
+      - install -Dm644 -t /app/share/dict en.license
+      - install -Dm644 -t /app/share/dict de-AT
+      - install -Dm644 -t /app/share/dict de-CH
+      - install -Dm644 -t /app/share/dict de-DE
+      - install -Dm644 -t /app/share/dict de.license
+      - install -Dm644 -t /app/share/dict fr
+      - install -Dm644 -t /app/share/dict fr.license
+      - install -Dm644 -t /app/etc/xdg/org.muttum.muttum muttum.toml
     sources:
       - type: archive
         url: "https://gitlab.adorsaz.ch/muttum/muttum/-/releases/\
-              25.11.1/downloads/dist/dictionaries-25.11.1.tar.xz"
-        sha256: fe743bcedfaab19adc94922a27cd2e16104f7c0488fb6a4312f8c63f0a0f7374
+              26.03.1/downloads/dist/dictionaries-26.03.1.tar.xz"
+        sha256: cc92cccf7b4d03a53952508dd67fcc9c1341c0dea545ff4a12390f492ce73b2a
   - name: muttum
     buildsystem: meson
     build-options:
@@ -44,8 +44,9 @@ modules:
         CARGO_NET_OFFLINE: 'true'
     config-opts:
       - -Dbuildtype=release
+      - -Dgnome=true
     sources:
       - type: archive
         url: "https://gitlab.adorsaz.ch/muttum/muttum/-/releases/\
-              25.11.1/downloads/dist/muttum-25.11.1.tar.xz"
-        sha256: f1e5aa366165d95473505a3c27f778406ff1b22ce6753d5c8d1434b410745fec
+              26.03.1/downloads/dist/muttum-26.03.1.tar.xz"
+        sha256: b3f93459f4ae45d15908ba40aa161f7221528aea44f394741f040b8462c9bb67
