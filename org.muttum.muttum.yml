@@ -35,8 +35,8 @@ modules:
     sources:
       - type: archive
         url: "https://gitlab.adorsaz.ch/muttum/muttum/-/releases/\
-              26.03.1/downloads/dist/dictionaries-26.03.1.tar.xz"
-        sha256: cc92cccf7b4d03a53952508dd67fcc9c1341c0dea545ff4a12390f492ce73b2a
+              26.08.2/downloads/dist/dictionaries-26.08.2.tar.xz"
+        sha256: a55c3a99ea8088119d0bb4ee60bb16ddd7f2923a81c7fa8bff089a17349d632b
   - name: muttum
     buildsystem: meson
     build-options:
@@ -48,5 +48,5 @@ modules:
     sources:
       - type: archive
         url: "https://gitlab.adorsaz.ch/muttum/muttum/-/releases/\
-              26.03.1/downloads/dist/muttum-26.03.1.tar.xz"
-        sha256: b3f93459f4ae45d15908ba40aa161f7221528aea44f394741f040b8462c9bb67
+              26.08.2/downloads/dist/muttum-26.08.2.tar.xz"
+        sha256: 7ed80c4f163181fb6db6f53e4b785dd43841eb0c8dc6808a4a99922f49b07eed
